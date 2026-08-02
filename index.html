@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#16130f">
+<title>Art-Bud | usługi ogólnobudowlane, Olsztyn | Artur Mrozek</title>
+<meta name="description" content="Usługi ogólnobudowlane w Olsztynie i okolicy: stany surowe, dachy, elewacje i ocieplenia, wykończenia wnętrz, kostka brukowa. Artur Mrozek, firma działa od 2018 roku. Tel. 793 532 159.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Art-Bud | usługi ogólnobudowlane, Olsztyn">
+<meta property="og:description" content="Stany surowe, dachy, elewacje, wykończenia wnętrz. Olsztyn i okolice. Tel. 793 532 159.">
+<meta property="og:image" content="img/og.jpg">
+<link rel="preload" href="fonts/plexcond-700-lat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-400-lat.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* ---------- kroje ---------- */
+@font-face{font-family:Plex;src:url(fonts/plex-400-lat.woff2) format('woff2');font-weight:100 700;font-style:normal;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Plex;src:url(fonts/plex-400-ext.woff2) format('woff2');font-weight:100 700;font-style:normal;font-display:swap;
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:PlexCond;src:url(fonts/plexcond-700-lat.woff2) format('woff2');font-weight:600 700;font-style:normal;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:PlexCond;src:url(fonts/plexcond-700-ext.woff2) format('woff2');font-weight:600 700;font-style:normal;font-display:swap;
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+/* ---------- tokeny ---------- */
+:root{
+  --paper:#F2EFE9;      /* wapienny */
+  --paper-2:#E7E2D9;
+  --ink:#16130F;        /* ciepła czerń */
+  --ink-2:#4A443C;
+  --line:#CFC8BC;
+  --rust:#9E3F26;       /* cegła */
+  --gut:clamp(20px,5vw,64px);
+  --rule:1px solid var(--line);
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#151310;--paper-2:#1E1B16;--ink:#EFEAE1;--ink-2:#A79E90;--line:#332E27;--rust:#D96A4A}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:Plex,ui-sans-serif,system-ui,sans-serif;
+  font-size:clamp(16px,1rem + .2vw,18px);line-height:1.6;
+  font-feature-settings:"tnum" 1;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:PlexCond,Plex,sans-serif;font-weight:700;line-height:.94;
+  letter-spacing:-.015em;text-transform:uppercase;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:inherit}
+img{max-width:100%;display:block}
+ul{margin:0;padding:0;list-style:none}
+
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gut)}
+.rule{border:0;border-top:var(--rule);margin:0}
+
+/* etykieta sekcji: 01 / ZAKRES PRAC */
+.sec-label{display:flex;gap:.9em;align-items:baseline;font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-2);padding:1.4rem 0;border-bottom:var(--rule)}
+.sec-label b{font-weight:600;color:var(--rust);font-variant-numeric:tabular-nums}
+
+section{padding-block:clamp(56px,9vw,120px)}
+section > .wrap > h2{font-size:clamp(2.4rem,8vw,5.5rem);margin:.5em 0 .35em}
+
+/* ---------- topbar ---------- */
+.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:saturate(1.2) blur(6px);border-bottom:var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:1.5rem;height:60px}
+.mark{font-family:PlexCond;font-weight:700;font-size:1.35rem;letter-spacing:.02em;text-decoration:none}
+.mark span{color:var(--rust)}
+.top nav{margin-left:auto;display:none;gap:1.6rem;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--ink-2)}
+.top nav a:hover{color:var(--ink)}
+.top .tel{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;font-weight:600;text-decoration:none;white-space:nowrap;
+  border:1px solid var(--ink);padding:.42em .9em;font-size:.86rem;letter-spacing:.02em}
+.top .tel:hover{background:var(--ink);color:var(--paper)}
+@media (min-width:900px){.top nav{display:flex}.top .tel{margin-left:0}}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(40px,7vw,80px)}
+.hero h1{font-size:clamp(3rem,13vw,10.5rem);letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.hero .lead{max-width:34ch;font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--ink-2);margin-top:1.6rem}
+.hero-grid{display:grid;gap:clamp(28px,5vw,56px);margin-top:clamp(28px,5vw,52px)}
+@media (min-width:860px){.hero-grid{grid-template-columns:1fr 1fr;align-items:end}}
+
+/* karta specyfikacji, jak metryczka projektu, nie „karta feature'ów" */
+.spec{border-top:2px solid var(--ink);font-size:.88rem}
+.spec div{display:flex;justify-content:space-between;gap:1.5rem;padding:.7rem 0;border-bottom:var(--rule)}
+.spec dt,.spec span:first-child{color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem}
+.spec span:last-child{text-align:right;font-weight:600}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.85em 1.4em;text-decoration:none;
+  font-weight:600;letter-spacing:.02em;border:1px solid var(--ink);transition:.15s}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:var(--rust);border-color:var(--rust)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- media ---------- */
+figure{margin:0}
+.shot{background:var(--paper-2);border:var(--rule);position:relative;overflow:hidden}
+.shot::after{content:attr(data-ph);position:absolute;inset:0;display:grid;place-items:center;
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);opacity:.55}
+.shot:has(img)::after{display:none}
+.shot img{width:100%;height:100%;object-fit:cover}
+figcaption{margin-top:.7rem;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+figcaption b{font-weight:600;color:var(--ink)}
+
+/* ---------- zakres prac ---------- */
+.scope{border-top:2px solid var(--ink)}
+.scope > li{padding:clamp(22px,3.5vw,38px) 0;border-bottom:var(--rule);
+  display:grid;gap:.9rem 3rem;grid-template-columns:1fr}
+@media (min-width:820px){.scope > li{grid-template-columns:minmax(11rem,16rem) 1fr;align-items:start}}
+.scope .no{font-family:PlexCond;font-weight:700;font-size:1.6rem;color:var(--rust);font-variant-numeric:tabular-nums}
+.scope h3{font-size:clamp(1.5rem,3.6vw,2.1rem)}
+.scope ul{display:flex;flex-wrap:wrap;gap:.45rem .5rem;color:var(--ink-2);font-size:.92rem}
+.scope ul li{border:var(--rule);padding:.25em .75em;background:var(--paper-2)}
+
+/* ---------- realizacje ---------- */
+.gal{display:grid;gap:clamp(16px,2.5vw,28px);grid-template-columns:repeat(2,1fr)}
+.gal figure:nth-child(1){grid-column:1/-1}
+.gal .shot{aspect-ratio:4/3}
+.gal figure:nth-child(1) .shot{aspect-ratio:16/9}
+@media (min-width:820px){
+  .gal{grid-template-columns:repeat(6,1fr)}
+  .gal figure:nth-child(1){grid-column:span 4}
+  .gal figure:nth-child(2){grid-column:span 2}
+  .gal figure:nth-child(2) .shot{aspect-ratio:3/4}
+  .gal figure:nth-child(3),.gal figure:nth-child(4){grid-column:span 3}
+}
+
+/* ---------- jak pracuję ---------- */
+.how{display:grid;gap:clamp(24px,4vw,48px);border-top:2px solid var(--ink);padding-top:2.2rem}
+@media (min-width:820px){.how{grid-template-columns:repeat(3,1fr)}}
+.how h3{font-size:1.15rem;letter-spacing:.02em;margin-bottom:.7rem}
+.how .no{display:block;color:var(--rust);font-family:PlexCond;font-size:.9rem;letter-spacing:.2em;margin-bottom:.9rem}
+.how p{color:var(--ink-2);margin:0}
+
+.nope{margin-top:clamp(40px,6vw,72px);border:1px solid var(--rust);border-top:3px solid var(--orange);padding:1.1rem 1.2rem;max-width:56ch;background:color-mix(in srgb,var(--paper-2) 65%,transparent)}
+.nope h3{font-size:1.05rem;margin-bottom:.6rem}
+.nope p{color:var(--ink-2);margin:0}
+
+/* ---------- kontakt ---------- */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .sec-label{color:color-mix(in srgb,var(--paper) 60%,transparent);border-color:color-mix(in srgb,var(--paper) 22%,transparent)}
+.contact h2{color:var(--paper)}
+.contact a.big{display:block;font-family:PlexCond;font-weight:700;text-decoration:none;
+  font-size:clamp(2.6rem,8vw,6rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.contact a.big:hover{color:var(--rust)}
+.contact .cols{display:grid;gap:2rem;margin-top:2.6rem}
+@media (min-width:760px){.contact .cols{grid-template-columns:repeat(3,1fr)}}
+.contact .cols h3{font-size:.72rem;letter-spacing:.18em;color:color-mix(in srgb,var(--paper) 55%,transparent);margin-bottom:.6rem}
+.contact .cols a,.contact .cols p{color:var(--paper);text-decoration:none;font-size:1.05rem}
+.contact .cols a:hover{color:var(--rust)}
+
+footer{background:var(--ink);color:color-mix(in srgb,var(--paper) 55%,transparent);
+  border-top:1px solid color-mix(in srgb,var(--paper) 18%,transparent);font-size:.8rem}
+footer .wrap{padding-block:2rem;display:flex;flex-wrap:wrap;gap:.4rem 2rem}
+
+/* ---------- mobilny pasek akcji ---------- */
+.bar{position:fixed;inset:auto 0 0 0;z-index:50;display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--ink);background:var(--paper)}
+.bar a{padding:1rem;text-align:center;text-decoration:none;font-weight:600;letter-spacing:.04em;
+  text-transform:uppercase;font-size:.82rem}
+.bar a:first-child{background:var(--ink);color:var(--paper)}
+@media (min-width:900px){.bar{display:none}}
+@media (max-width:899px){body{padding-bottom:56px}}
+
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+
+/* ---------- ruch ---------- */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .rev{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 42%}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  }
+}
+
+/* ---------- polish pass: czytelność + kontrolowany ruch ---------- */
+:root{--ease-out:cubic-bezier(.22,1,.36,1);--ease-in-out:cubic-bezier(.65,0,.35,1)}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{overflow-x:clip}
+h1,h2,h3{line-height:.99;overflow-wrap:break-word}
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero > .wrap{position:relative;z-index:1}
+.hero::after{content:"";position:absolute;z-index:0;inset:0 0 auto auto;width:1px;height:30%;background:var(--rust);transform-origin:top;animation:draw-line 700ms .2s var(--ease-out) both;opacity:.7}
+.spec div{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);align-items:start;gap:1rem}
+.spec div > *{min-width:0}
+.spec span:last-child{overflow-wrap:anywhere;line-height:1.35}
+.btn{transition:background .22s var(--ease-out),border-color .22s var(--ease-out),color .22s var(--ease-out),transform .22s var(--ease-out)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.scope > li{transition:background .22s var(--ease-out),border-color .22s var(--ease-out),transform .22s var(--ease-out)}
+.scope > li:hover,.scope > li:focus-within{background:color-mix(in srgb,var(--paper-2) 45%,transparent);border-color:var(--rust);transform:translateX(5px)}
+.scope ul li{transition:background .18s ease,border-color .18s ease,color .18s ease}
+.scope ul li:hover{background:var(--paper);border-color:var(--rust);color:var(--ink)}
+.shot{transition:border-color .22s var(--ease-out),transform .22s var(--ease-out)}
+.shot:hover{border-color:var(--rust);transform:translateY(-2px)}
+.contact .cols a{overflow-wrap:anywhere}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero .lead,.hero .cta-row,.hero .spec{animation:hero-in 620ms var(--ease-out) both}
+  .hero .lead{animation-delay:80ms}.hero .cta-row{animation-delay:150ms}.hero .spec{animation-delay:220ms}
+  @keyframes hero-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes draw-line{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+}
+@media (max-width:680px){
+  .hero h1{font-size:clamp(2.85rem,15.5vw,5.25rem);line-height:.99}
+  .spec div{grid-template-columns:1fr;gap:.14rem}
+  .spec span:last-child{text-align:left}
+  .contact a.big{font-size:clamp(2.65rem,15vw,5.4rem);line-height:.99;overflow-wrap:anywhere}
+  .scope > li:hover,.scope > li:focus-within{transform:none}
+}
+@media (max-width:420px){
+  .top .wrap{gap:.75rem}
+  .top .tel{padding:.4em .62em;font-size:.78rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero::after,.hero h1,.hero .lead,.hero .cta-row,.hero .spec{animation:none!important}
+  .btn,.scope > li,.scope ul li,.shot{transition:none}
+}
+
+/* Hero correction: compact editorial hierarchy, no accidental word wrapping. */
+.hero{padding-block:clamp(38px,5.5vw,78px)}
+.hero h1{font-size:clamp(3rem,5.8vw,6rem);max-width:13ch;line-height:.98;letter-spacing:-.025em}
+.hero-grid{margin-top:clamp(24px,4vw,44px);gap:clamp(28px,4vw,48px)}
+@media (max-width:680px){.hero h1{font-size:clamp(2.85rem,15.5vw,5.25rem);max-width:12ch;line-height:1}}
+
+/* Controlled orange accent: warmth and action without turning the page loud. */
+:root{--orange:#d96b30}
+.hero::after{background:var(--orange)}
+.hero h1 em{color:var(--orange)}
+.top .tel:hover{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.btn-solid:hover{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.sec-label b,.scope .no{color:var(--orange)}
+.scope > li:hover,.scope > li:focus-within,.scope ul li:hover{border-color:var(--orange)}
+.nope{border-color:var(--rust);border-top-color:var(--orange)}
+.contact .sec-label b,.contact a.big:hover{color:var(--orange)}
+.bar a:first-child{background:var(--orange);color:var(--ink)}
+.skip-link{position:fixed;left:1rem;top:-5rem;z-index:100;padding:.7rem 1rem;background:var(--ink);color:var(--paper);font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:top .2s ease}
+.skip-link:focus{top:1rem}
+html{scroll-padding-top:5rem}
+.sec-label{display:none}
+#realizacje .sec-label{display:flex}
+.shot{min-width:0;min-height:0}
+.shot img[hidden]{display:none}
+.shot-image::before,.shot-image::after{display:none}
+.lead,.gallery-intro,.gallery-note,.how p,.nope p{ text-wrap:pretty }
+.gal figcaption{overflow-wrap:anywhere;text-wrap:pretty}
+.shot.image-error{display:grid;place-items:center;background:var(--paper-2);color:var(--ink-2)}
+.shot.image-error::before{content:"Zdjęcie chwilowo niedostępne";position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.shot.image-error::after{display:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (forced-colors:active){.top,.hero,.contact,footer{forced-color-adjust:auto}.btn,.top .tel,.shot,.spec,.nope{border-color:ButtonText}.btn-solid,.bar a:first-child{background:Highlight;color:HighlightText}.hero::after{background:ButtonText}.skip-link{background:CanvasText;color:Canvas}.top nav a,.contact .cols a{color:LinkText}.top .tel:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid Highlight}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Przejdź do treści</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">ART<span>·</span>BUD</a>
+    <nav aria-label="Główna nawigacja">
+      <a href="#zakres">Zakres prac</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#praca">Jak pracuję</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+48793532159">793 532 159</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Budujemy<br>i&nbsp;wykańczamy<br><em>od fundamentu</em></h1>
+    <div class="hero-grid">
+      <div>
+        <p class="lead">Art-Bud, usługi ogólnobudowlane Artura Mrozka. Stany surowe, dachy,
+        elewacje i wykończenia wnętrz. Olsztyn i okolice, od 2018 roku.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="tel:+48793532159">Zadzwoń: 793 532 159</a>
+          <a class="btn btn-ghost" href="#realizacje">Zobacz realizacje</a>
+        </div>
+      </div>
+      <div class="spec">
+        <div><span>Zakres</span><span>Ogólnobudowlany</span></div>
+        <div><span>Obszar</span><span>Olsztyn + ok. 50&nbsp;km</span></div>
+        <div><span>Działalność od</span><span>2018</span></div>
+        <div><span>Wycena</span><span>Bezpłatna, po oględzinach</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAKRES -->
+<section id="zakres">
+  <div class="wrap">
+    <div class="sec-label">Zakres prac</div>
+    <h2 class="rev">Co robię</h2>
+
+    <ul class="scope">
+      <li class="rev">
+        <h3>Stany surowe</h3>
+        <ul>
+          <li>fundamenty</li><li>ściany nośne i działowe</li><li>stropy</li>
+          <li>kominy</li><li>nadproża</li><li>stan surowy zamknięty</li>
+        </ul>
+      </li>
+      <li class="rev">
+        <h3>Dachy</h3>
+        <ul>
+          <li>więźba dachowa</li><li>krycie dachówką</li><li>blachodachówka</li>
+          <li>papa i membrana</li><li>rynny i obróbki</li><li>podbitki</li>
+        </ul>
+      </li>
+      <li class="rev">
+        <h3>Elewacje i&nbsp;ocieplenia</h3>
+        <ul>
+          <li>styropian i wełna</li><li>tynki cienkowarstwowe</li><li>siding</li>
+          <li>ocieplenie poddasza</li><li>parapety zewnętrzne</li><li>malowanie elewacji</li>
+        </ul>
+      </li>
+      <li class="rev">
+        <h3>Wykończenia wnętrz</h3>
+        <ul>
+          <li>tynki i gładzie</li><li>zabudowy z płyt g-k</li><li>sufity podwieszane</li>
+          <li>płytki i terakota</li><li>panele i podłogi</li><li>malowanie</li>
+          <li>remonty łazienek</li><li>wykończenie pod klucz</li>
+        </ul>
+      </li>
+      <li class="rev">
+        <h3>Wokół domu</h3>
+        <ul>
+          <li>kostka brukowa</li><li>podjazdy i chodniki</li><li>obrzeża i krawężniki</li>
+          <li>tarasy</li><li>ogrodzenia</li><li>drobne prace ziemne</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- REALIZACJE -->
+<section id="realizacje">
+  <div class="wrap">
+    <div class="sec-label">Realizacje</div>
+    <h2 class="rev">Wykonane roboty</h2>
+    <p class="lead rev" style="max-width:52ch;margin-bottom:2.4rem">
+      Zdjęcia z placów budowy, na których pracowałem. Bez retuszu i bez zdjęć z internetu.</p>
+
+    <div class="gal">
+      <figure class="rev"><div class="shot"><img src="img/lazienka-wykonczenie-02.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="Szeroki widok wykończonej łazienki z wanną, umywalką i zabudową ściany dekoracyjnej"></div>
+        <figcaption><b>Wykończenie łazienki</b></figcaption></figure>
+      <figure class="rev"><div class="shot"><img src="img/lazienka-wykonczenie-01.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Jasna łazienka z zabudową prysznica, wanną i drewnianą ścianą dekoracyjną"></div>
+        <figcaption><b>Detale łazienki</b></figcaption></figure>
+      <figure class="rev"><div class="shot"><img src="img/schody-drewniane-01.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="Drewniane schody z czarną metalową balustradą"></div>
+        <figcaption><b>Schody drewniane</b></figcaption></figure>
+      <figure class="rev"><div class="shot"><img src="img/schody-drewniane-02.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Wielopoziomowe schody drewniane z geometryczną czarną balustradą"></div>
+        <figcaption><b>Balustrada schodów</b></figcaption></figure>
+    </div>
+
+    <p class="rev" style="margin-top:2.4rem;color:var(--ink-2)">
+      Więcej zdjęć z bieżących budów wrzucam na
+      <a href="https://www.facebook.com/p/Art-Bud-us%C5%82ugi-og%C3%B3lnobudowlane-Artur-Mrozek-100023131391723/"
+         target="_blank" rel="noopener">profil na Facebooku&nbsp;↗</a>.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- JAK PRACUJĘ -->
+<section id="praca">
+  <div class="wrap">
+    <div class="sec-label">Jak pracuję</div>
+    <h2 class="rev">Zasady</h2>
+
+    <div class="how">
+      <div class="rev">
+        <span class="no">WYCENA</span>
+        <h3>Najpierw oględziny, potem cena</h3>
+        <p>Przyjeżdżam obejrzeć robotę i dopiero wtedy podaję kwotę. Wycena jest bezpłatna
+        i rozpisana na pozycje, wiadomo, za co się płaci.</p>
+      </div>
+      <div class="rev">
+        <span class="no">TERMIN</span>
+        <h3>Podaję termin, który dotrzymam</h3>
+        <p>Wolę powiedzieć „za trzy tygodnie" i przyjechać, niż „jutro" i nie dojechać.
+        Jeśli coś się przesuwa, dzwonię, zanim się o tym dowiesz sam.</p>
+      </div>
+      <div class="rev">
+        <span class="no">ROZLICZENIE</span>
+        <h3>Etapami, na fakturę</h3>
+        <p>Przy większych robotach rozliczamy się etapami, po odbiorze każdego z nich.
+        Firma jest zarejestrowana i wystawia fakturę.</p>
+      </div>
+    </div>
+
+    <div class="nope rev">
+      <h3>Czego nie robię</h3>
+      <p>Nie robię instalacji elektrycznych ani hydrauliki wymagającej uprawnień.
+      Od tego mam sprawdzonych ludzi i mogę ich polecić. Nie biorę też robót,
+      których nie zdążę zrobić porządnie w podanym terminie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="contact">
+  <div class="wrap">
+    <div class="sec-label">Kontakt</div>
+    <h2 class="rev" style="margin-bottom:.6em">Zadzwoń<br>i opisz robotę</h2>
+    <a class="big" href="tel:+48793532159">793 532 159</a>
+
+    <div class="cols">
+      <div>
+        <h3>E-MAIL</h3>
+        <a href="mailto:ambud4@gmail.com">ambud4@gmail.com</a>
+      </div>
+      <div>
+        <h3>FACEBOOK</h3>
+        <a href="https://www.facebook.com/p/Art-Bud-us%C5%82ugi-og%C3%B3lnobudowlane-Artur-Mrozek-100023131391723/"
+           target="_blank" rel="noopener">Art-Bud, profil ↗</a>
+      </div>
+      <div>
+        <h3>OBSZAR</h3>
+        <p>Olsztyn, gm. Stawiguda<br>i okolice do ok. 50&nbsp;km</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Art-Bud usługi ogólnobudowlane Artur Mrozek</span>
+    <span>NIP 7393544403</span>
+    <span>REGON 280398043</span>
+    <span>Działalność od 2018 r.</span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Szybki kontakt">
+  <a href="tel:+48793532159">Zadzwoń</a>
+  <a href="https://m.me/100023131391723" target="_blank" rel="noopener">Messenger</a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"GeneralContractor",
+  "name":"Art-Bud usługi ogólnobudowlane Artur Mrozek",
+  "alternateName":"Art-Bud",
+  "description":"Usługi ogólnobudowlane: stany surowe, dachy, elewacje i ocieplenia, wykończenia wnętrz, kostka brukowa.",
+  "telephone":"+48793532159",
+  "email":"ambud4@gmail.com",
+  "foundingDate":"2018-10-01",
+  "vatID":"PL7393544403",
+  "taxID":"7393544403",
+  "areaServed":[{"@type":"City","name":"Olsztyn"},{"@type":"AdministrativeArea","name":"powiat olsztyński"}],
+  "address":{"@type":"PostalAddress","addressLocality":"Olsztyn","addressRegion":"warmińsko-mazurskie","addressCountry":"PL"},
+  "sameAs":["https://www.facebook.com/p/Art-Bud-us%C5%82ugi-og%C3%B3lnobudowlane-Artur-Mrozek-100023131391723/"]
+}
+</script>
+<script>
+document.addEventListener('error', function (event) {
+  var image = event.target;
+  if (image && image.tagName === 'IMG') {
+    image.hidden = true;
+    var shot = image.closest('.shot');
+    if (shot) shot.classList.add('image-error');
+  }
+}, true);
+document.querySelectorAll('.shot img').forEach(function (image) {
+  image.parentElement.classList.add('shot-image');
+});
+</script>
+</body>
+</html>
