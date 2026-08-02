@@ -234,24 +234,24 @@ h1,h2,h3{line-height:.99;overflow-wrap:break-word}
 /* Hero symbol: a large visual anchor for the open right column. */
 .hero-head{display:grid;gap:clamp(24px,4vw,48px);align-items:start;container-type:inline-size}
 .hero-symbol{display:grid;place-items:center;min-height:clamp(420px,44vw,700px);padding:0 0 1rem}
-.hero-symbol img{width:clamp(560px,52vw,900px);max-width:100%;height:auto;aspect-ratio:1;object-fit:contain;opacity:.94;filter:saturate(.92) contrast(1.04);transition:transform .5s var(--ease-out),opacity .3s ease}
+.hero-symbol img{width:clamp(320px,38vw,560px);max-width:100%;height:auto;object-fit:contain;opacity:.94;filter:saturate(.92) contrast(1.04);transition:transform .5s var(--ease-out),opacity .3s ease}
 .hero-symbol:hover img{transform:translateY(-5px) rotate(-1deg) scale(1.025);opacity:1}
 @media (min-width:860px){
   .hero-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .hero-symbol{justify-self:stretch;min-height:clamp(480px,42vw,740px);padding-top:clamp(12px,2vw,32px);margin-right:clamp(-110px,-5vw,-28px)}
-  .hero-symbol img{width:clamp(650px,52vw,900px);max-width:none}
+  .hero-symbol img{width:clamp(420px,38vw,620px);max-width:none}
 }
 @media (min-width:860px) and (max-width:1199px){
-  .hero-symbol img{width:clamp(500px,48vw,680px)}
+  .hero-symbol img{width:clamp(400px,36vw,520px)}
 }
 @media (min-width:1200px){
   .hero-symbol{min-height:clamp(560px,45vw,820px)}
-  .hero-symbol img{width:clamp(820px,58vw,1080px)}
+  .hero-symbol img{width:clamp(500px,32vw,620px)}
 }
 @media (max-width:859px){
   .hero-head{grid-template-columns:1fr}
   .hero-symbol{order:2;justify-self:start;width:min(100%,560px);min-height:320px;margin-top:-.5rem}
-  .hero-symbol img{width:min(100%,560px);max-width:100%}
+  .hero-symbol img{width:min(100%,520px);max-width:100%}
 }
 @media (prefers-reduced-motion:no-preference){
   .hero-symbol{will-change:transform;animation:hero-symbol-float 7.5s var(--ease-in-out) .35s infinite}
@@ -312,7 +312,7 @@ html{scroll-padding-top:5rem}
     <div class="hero-head">
       <h1>Budujemy<br>i&nbsp;wykańczamy<br><em>od fundamentu</em></h1>
       <div class="hero-symbol" aria-hidden="true">
-        <img src="img/hero-icon-v3.png" width="1248" height="1248" alt="" decoding="async">
+        <img src="img/hero-icon-v3-cropped.png" width="470" height="663" alt="" decoding="async">
       </div>
     </div>
     <div class="hero-grid">
