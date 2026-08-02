@@ -231,18 +231,31 @@ h1,h2,h3{line-height:.99;overflow-wrap:break-word}
 .hero-grid{margin-top:clamp(24px,4vw,44px);gap:clamp(28px,4vw,48px)}
 @media (max-width:680px){.hero h1{font-size:clamp(2.85rem,15.5vw,5.25rem);max-width:12ch;line-height:1}}
 
-/* Hero symbol: a restrained visual anchor for the open right column. */
+/* Hero symbol: a large visual anchor for the open right column. */
 .hero-head{display:grid;gap:clamp(24px,4vw,48px);align-items:center}
-.hero-symbol{display:grid;place-items:center;min-height:clamp(300px,34vw,500px);padding:0 0 1rem}
-.hero-symbol img{width:clamp(320px,30vw,460px);max-width:100%;height:auto;aspect-ratio:1;object-fit:contain;opacity:.94;filter:saturate(.92) contrast(1.04);transition:transform .5s var(--ease-out),opacity .3s ease}
-.hero-symbol:hover img{transform:translateY(-5px) rotate(-1deg);opacity:1}
+.hero-symbol{display:grid;place-items:center;min-height:clamp(420px,44vw,700px);padding:0 0 1rem}
+.hero-symbol img{width:clamp(560px,52vw,900px);max-width:100%;height:auto;aspect-ratio:1;object-fit:contain;opacity:.94;filter:saturate(.92) contrast(1.04);transition:transform .5s var(--ease-out),opacity .3s ease}
+.hero-symbol:hover img{transform:translateY(-5px) rotate(-1deg) scale(1.025);opacity:1}
 @media (min-width:860px){
-  .hero-head{grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr)}
-  .hero-symbol{justify-self:stretch;min-height:clamp(360px,34vw,500px);padding-top:clamp(12px,2vw,32px)}
+  .hero-head{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+  .hero-symbol{justify-self:stretch;min-height:clamp(480px,42vw,740px);padding-top:clamp(12px,2vw,32px);margin-right:clamp(-110px,-5vw,-28px)}
+  .hero-symbol img{width:clamp(650px,52vw,900px);max-width:none}
+}
+@media (min-width:860px) and (max-width:1199px){
+  .hero-symbol img{width:clamp(500px,48vw,680px)}
+}
+@media (min-width:1200px){
+  .hero-symbol{min-height:clamp(560px,45vw,820px)}
+  .hero-symbol img{width:clamp(820px,58vw,1080px)}
 }
 @media (max-width:859px){
   .hero-head{grid-template-columns:1fr}
-  .hero-symbol{order:2;justify-self:start;width:min(100%,330px);min-height:230px;margin-top:-.5rem}
+  .hero-symbol{order:2;justify-self:start;width:min(100%,560px);min-height:320px;margin-top:-.5rem}
+  .hero-symbol img{width:min(100%,560px);max-width:100%}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero-symbol{will-change:transform;animation:hero-symbol-float 7.5s var(--ease-in-out) .35s infinite}
+  @keyframes hero-symbol-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-10px,0) rotate(.35deg)}}
 }
 @media (prefers-reduced-motion:reduce){.hero-symbol img{transition:none}.hero-symbol:hover img{transform:none}}
 
