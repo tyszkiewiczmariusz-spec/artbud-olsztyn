@@ -231,6 +231,21 @@ h1,h2,h3{line-height:.99;overflow-wrap:break-word}
 .hero-grid{margin-top:clamp(24px,4vw,44px);gap:clamp(28px,4vw,48px)}
 @media (max-width:680px){.hero h1{font-size:clamp(2.85rem,15.5vw,5.25rem);max-width:12ch;line-height:1}}
 
+/* Hero symbol: a restrained visual anchor for the open right column. */
+.hero-head{display:grid;gap:clamp(24px,4vw,48px);align-items:center}
+.hero-symbol{display:grid;place-items:center;min-height:clamp(220px,30vw,380px);padding:0 0 1rem}
+.hero-symbol img{width:min(100%,360px);height:auto;object-fit:contain;opacity:.94;filter:saturate(.92) contrast(1.04);transition:transform .5s var(--ease-out),opacity .3s ease}
+.hero-symbol:hover img{transform:translateY(-5px) rotate(-1deg);opacity:1}
+@media (min-width:860px){
+  .hero-head{grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr)}
+  .hero-symbol{justify-self:stretch;min-height:clamp(280px,29vw,420px);padding-top:clamp(12px,2vw,32px)}
+}
+@media (max-width:859px){
+  .hero-head{grid-template-columns:1fr}
+  .hero-symbol{order:2;justify-self:start;width:min(100%,260px);min-height:180px;margin-top:-.5rem}
+}
+@media (prefers-reduced-motion:reduce){.hero-symbol img{transition:none}.hero-symbol:hover img{transform:none}}
+
 /* Controlled orange accent: warmth and action without turning the page loud. */
 :root{--orange:#d96b30}
 .hero::after{background:var(--orange)}
@@ -281,7 +296,12 @@ html{scroll-padding-top:5rem}
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <h1>Budujemy<br>i&nbsp;wykańczamy<br><em>od fundamentu</em></h1>
+    <div class="hero-head">
+      <h1>Budujemy<br>i&nbsp;wykańczamy<br><em>od fundamentu</em></h1>
+      <div class="hero-symbol" aria-hidden="true">
+        <img src="img/hero-icon-v3.png" width="1248" height="1248" alt="" decoding="async">
+      </div>
+    </div>
     <div class="hero-grid">
       <div>
         <p class="lead">Art-Bud, usługi ogólnobudowlane Artura Mrozka. Stany surowe, dachy,
